@@ -1,0 +1,32 @@
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
+
+@import "../../../design-tokens/tokens.scss";
+
+.inputWrap {
+  padding: $letter-spacing-l $letter-spacing-l;
+  width: 350px;
+  .label {
+    margin-right: 5px;
+    width: 20%;
+    text-align: right;
+  }
+  &.inLine {
+    display: inline-flex;
+  }
+  .input {
+    width: 70%;
+    border: solid 1px $b200;
+    &:hover {
+      border: solid 1px $b300;
+    }
+    &:focus {
+      border: solid 1px $b400;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      border: solid 1px $b200 !important;
+    }
+
+  }
+}
