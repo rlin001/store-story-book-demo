@@ -19,7 +19,6 @@ function App() {
           console.log("reset, ", e, formData);
           }}
         />
-        
         <a
           className="App-link"
           href="https://reactjs.org"
