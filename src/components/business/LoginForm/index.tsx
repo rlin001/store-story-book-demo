@@ -18,7 +18,7 @@ export interface LoginFormProps {
     reset: any;
 }
 
-export const LoginForm: React.FC<LoginFormProps> = (props: LoginFormProps) => {
+const LoginForm: React.FC<LoginFormProps> = (props: LoginFormProps) => {
 
     const { title, backgroundColor, color, borderColor, style, submit, reset } = props;
     const initFormData = {
@@ -75,3 +75,5 @@ export const LoginForm: React.FC<LoginFormProps> = (props: LoginFormProps) => {
         </form>
     );
 };
+
+export default LoginForm;

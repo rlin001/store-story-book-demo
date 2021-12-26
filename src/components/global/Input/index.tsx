@@ -27,7 +27,7 @@ export interface InputProps {
     style?:object;
 }
 
-export const Input: React.FC<InputProps> = (props: InputProps) => {
+const Input: React.FC<InputProps> = (props: InputProps) => {
     const { type='text', inLine, label, style, disabled=false, size, color, backgroundColor, borderColor, ...restProps } = props;
 
     return (
@@ -58,3 +58,5 @@ export const Input: React.FC<InputProps> = (props: InputProps) => {
         </div>
     );
 };
+
+export default Input;
