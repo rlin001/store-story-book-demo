@@ -18,7 +18,7 @@ export interface ButtonProps {
     style?: object;
 }
 
-const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     const { label, style, children, size, type, backgroundColor, color, disabled, borderColor, ...restProps } = props;
     return (
         <button
@@ -44,5 +44,3 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
         </button>
     );
 };
-
-export default Button;

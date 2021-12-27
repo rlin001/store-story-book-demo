@@ -1,10 +1,7 @@
 import React, {
     ChangeEventHandler,
-    DOMElement,
-    FocusEventHandler, FormEventHandler,
-    KeyboardEventHandler,
-    MouseEventHandler,
-    ReactDOM
+    FocusEventHandler,
+    FormEventHandler,
 } from 'react';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
@@ -27,7 +24,7 @@ export interface InputProps {
     style?:object;
 }
 
-const Input: React.FC<InputProps> = (props: InputProps) => {
+export const Input: React.FC<InputProps> = (props: InputProps) => {
     const { type='text', inLine, label, style, disabled=false, size, color, backgroundColor, borderColor, ...restProps } = props;
 
     return (
@@ -58,5 +55,3 @@ const Input: React.FC<InputProps> = (props: InputProps) => {
         </div>
     );
 };
-
-export default Input;

@@ -12,7 +12,7 @@ export interface TitleProps {
     borderColor?:string;
 }
 
-const Title: React.FC<TitleProps> = (props: TitleProps) => {
+export const Title: React.FC<TitleProps> = (props: TitleProps) => {
     const { color, backgroundColor, borderColor, level, text, ...restProps } = props;
 
     const Component = `h${level}`;
@@ -32,5 +32,3 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
        </>
     );
 };
-
-export default  Title;
