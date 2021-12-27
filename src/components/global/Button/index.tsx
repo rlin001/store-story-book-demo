@@ -1,13 +1,9 @@
-import React, {MouseEventHandler} from 'react';
-import classNames from 'classnames/bind';
-import styles from './index.module.scss';
+import React from 'react';
+import './index.css'
 
-const cx = classNames.bind(styles);
-
-
-export interface ButtonProps {
+declare interface ButtonProps {
     label?: string;
-    onClick?: MouseEventHandler;
+    onClick?: any;
     children?: any;
     size?: 'sm'|'md'|'lg';
     type?: 'primary' | 'default';
@@ -24,11 +20,7 @@ export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
         <button
             disabled={disabled}
             {...restProps}
-            className={
-                cx('button', size, type, {
-                    'disabled': disabled
-                })
-            }
+            className={`button ${size} ${type} ${disabled ? 'disabled' : ''}`}
             style={
                 {
                     ...style,

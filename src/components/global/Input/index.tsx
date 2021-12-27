@@ -1,20 +1,13 @@
-import React, {
-    ChangeEventHandler,
-    FocusEventHandler,
-    FormEventHandler,
-} from 'react';
-import classNames from 'classnames/bind';
-import styles from './index.module.scss';
+import React from 'react';
+import './index.css'
 
-const cx = classNames.bind(styles);
-
-export interface InputProps {
+declare interface InputProps {
     label?: string;
     type: 'text'|'number'|'password';
     value?: string;
-    onInput?: FormEventHandler;
-    onBlur?: FocusEventHandler;
-    onChange?: ChangeEventHandler;
+    onInput?: any;
+    onBlur?: any;
+    onChange?: any;
     disabled?: boolean;
     size?: 'sm'|'md'|'lg';
     color?: string;
@@ -28,16 +21,12 @@ export const Input: React.FC<InputProps> = (props: InputProps) => {
     const { type='text', inLine, label, style, disabled=false, size, color, backgroundColor, borderColor, ...restProps } = props;
 
     return (
-        <div className={cx('inputWrap', {
-            'inLine': inLine
-        })}>
+        <div className={`inputWrap ${inLine ? 'inLine': ''}`}>
             {label ? (
-                <div className={cx('label')}>{label}</div>
+                <div className='label'>{label}</div>
             ): null}
             <input
-                className={cx('input', size, {
-                    'disabled': disabled
-                })}
+                className={`input ${size} ${disabled ? 'disabled': ''}`}
                 style={
                     {
                         ...style,

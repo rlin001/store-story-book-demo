@@ -1,0 +1,54 @@
+
+@import "../../../design-tokens/tokens.css";
+
+
+.button {
+  padding: var(--letter-spacing-m) var(--spacing-m);
+  border-radius: var(--border-radius-m);
+  font-size: var(--font-size-m);
+  font-family: var(--web-font-family);
+  cursor: pointer;
+  color: var(--b300);
+  border-color: var(--b300);
+}
+
+.button.sm {
+    padding: var(--letter-spacing-s) var(--spacing-s);
+    font-size: var(--font-size-s);
+  }
+.button.lg {
+    padding: var(--letter-spacing-l) var(--spacing-l);
+    font-size: var(--font-size-l);
+  }
+.button.primary {
+  color: var(--n100);
+  background-color: var(--b300);
+  border-color: var(--b300);
+}
+.button.primary:hover {
+  color: var(--n100);
+  background-color: var(--b400);
+  border-color: var(--b400);
+}
+.button.primary:focus {
+    color: var(--n100);
+    background-color: var(--b500);
+    border-color: var(--b500);
+  }
+.button.primary:active {
+    color: var(--n100);
+    background-color: var(--b600);
+    border-color: var(--b600);
+  }
+.button:hover {
+    color: var(--b400);
+  }
+.button:focus {
+    color: var(--b500);
+  }
+.button:active {
+    color: var(--b600);
+  }
+.button.disabled {
+    cursor: not-allowed;
+  }

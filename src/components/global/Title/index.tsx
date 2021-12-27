@@ -1,10 +1,8 @@
-import React, {DOMElement, ReactDOM} from 'react';
-import classNames from 'classnames/bind';
-import styles from './index.module.scss';
+import React from 'react';
+import './index.css'
 
-const cx = classNames.bind(styles);
 
-export interface TitleProps {
+declare interface TitleProps {
     level: number;
     text: string;
     color?: string;

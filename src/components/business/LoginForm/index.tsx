@@ -1,14 +1,8 @@
-import React, {MouseEventHandler, useState} from 'react';
-import classNames from 'classnames/bind';
-import styles from './index.module.scss';
-import {Input} from "../../global/Input";
-import {Button} from "../../global/Button";
-import {Title} from "../../global/Title";
+import React, { useState } from 'react';
+import { Input, Button, Title } from "../../global";
+import './index.css'
 
-const cx = classNames.bind(styles);
-
-
-export interface LoginFormProps {
+declare interface LoginFormProps {
     title: string;
     color?: string;
     backgroundColor?:string;
@@ -41,9 +35,7 @@ export const LoginForm: React.FC<LoginFormProps> = (props: LoginFormProps) => {
 
     return (
         <form
-            className={
-                cx('loginForm')
-            }
+            className='loginForm'
             style={
                 {
                     ...style,

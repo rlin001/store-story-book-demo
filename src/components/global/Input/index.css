@@ -1,0 +1,29 @@
+@import "../../../design-tokens/tokens.css";
+
+.inputWrap {
+  padding: var(--letter-spacing-l) var(--letter-spacing-l);
+  width: 350px;
+}
+.inputWrap .label {
+    margin-right: 5px;
+    width: 20%;
+    text-align: right;
+  }
+.inputWrap.inLine {
+    display: inline-flex;
+  }
+.inputWrap .input {
+    width: 70%;
+    border: solid 1px var(--b200);
+  }
+.inputWrap .input:hover {
+   border: solid 1px var(--b300);
+ }
+.inputWrap .input:focus {
+   border: solid 1px var(--b400);
+ }
+
+.inputWrap .input.disabled {
+   cursor: not-allowed;
+   border: solid 1px var(--b200) !important;
+ }
