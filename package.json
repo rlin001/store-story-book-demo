@@ -1,6 +1,6 @@
 {
   "name": "@rlin001/store-story-book-demo",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "repository": "git://github.com/rlin001/store-story-book-demo.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
