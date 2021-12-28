@@ -26,7 +26,7 @@ export const Input: React.FC<InputProps> = (props: InputProps) => {
                 <div className='label'>{label}</div>
             ): null}
             <input
-                className={`input ${size} ${disabled ? 'disabled': ''}`}
+                className={`input ${size || ''} ${disabled ? 'disabled': ''}`}
                 style={
                     {
                         ...style,

@@ -29,6 +29,7 @@ export const LoginForm: React.FC<LoginFormProps> = (props: LoginFormProps) => {
 
     const handleReset = (e: any) =>{
         if (typeof reset === 'function'){
+            setFormData(initFormData);
             reset(e, formData);
         }
     }
